@@ -5,4 +5,4 @@ LaTeX Beamer Havasu
 Work in Progress ... backing up my work.
 
 ## Stackexchange
-https://ex.stachexchange.com/questions/146529/design-a-customer-beamer-theme-from-scratch
+https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch#146682
