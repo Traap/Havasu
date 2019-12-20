@@ -1,39 +1,23 @@
 % Mode presentation {{{
 \mode<presentation>
+\newcommand{\fkblue}{red!0!green!99!blue!190}%
 % -------------------------------------------------------------------------- }}}
 % The background {{{
 \setbeamertemplate{background}{
-  \begin{tikzpicture}
-    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-    \fill[color=brown] (0,2) rectangle (\the\paperwidth,\the\paperheight);
-    \fill[color=orange] (0,0) rectangle(2.95,1.9);
-    \fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
-    \ifnum\thepage>1\relax%
-      \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-    \fi
-  \end{tikzpicture}
 }
 % -------------------------------------------------------------------------- }}}
 % Title page {{{
 \defbeamertemplate*{title page}{havasu}[1][]{%
-  %
-  \vskip6cm%
-  \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}%
+  \fkHeader%
+  \begin{center}%
     \usebeamerfont{title}\inserttitle\par%
-    % \insertlogo%
-  \end{beamercolorbox}%
-  %
-  \vskip0.75cm%
-  \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}%
+    \vskip0.5cm%
     \usebeamerfont{author}\insertauthor%
-  \end{beamercolorbox}%
-  %
-  \vskip0.2cm%
-  \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}%
+    \vskip0.5cm%
     \usebeamerfont{author}\insertdate%
-  \end{beamercolorbox}%
-  %
-  \vfill%
+  \end{center}%
+  \vskip3cm%
+  \includegraphics[scale=.44]{fk-solutions}%
 }
 
 % -------------------------------------------------------------------------- }}}
