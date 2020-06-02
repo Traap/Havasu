@@ -1,20 +1,29 @@
-% Document preamble {{{
+% {{{ Document preamble
+
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
 \title{There Is No Largest Prime Number}
 \date[ISPN ’80]{27th International Symposium of Prime Numbers}
 \author[Euclid]{Euclid of Alexandria \texttt{euclid@alexandria.edu}}
+
 \usetheme{havasu}
+
 % -------------------------------------------------------------------------- }}}
-% Presentation {{{
+% {{{ Presentation
+
 \begin{document}
-% Title page {{{
+
+% {{{ Title page
+
 \begin{frame}
-\titlepage
+\titlepage%
 \end{frame}
+
 % -------------------------------------------------------------------------- }}}
-% SubTitle page {{{
+% {{{ SubTitle page
+
 \begin{frame}%
   \frametitle{There is No Largest Prime Number}%
   \framesubtitle{The proof uses \textit{reductio ad absurdum}.}%
@@ -31,22 +40,29 @@
     number not in the first $p$ numbers.%
   \end{enumerate}%
 \end{frame}%
+
 % -------------------------------------------------------------------------- }}}
-% Longer title {{{
+% {{{ Longer title
+
 \begin{frame}{Only the frame title argument was use}%
   \begin{itemize}%
     \item one%
     \item two%
   \end{itemize}%
 \end{frame}%
+
 % -------------------------------------------------------------------------- }}}
-% Picture show{{{
+% {{{ Picture show
+
 \begin{frame}{CID Overview}{Featuring DevOps}%
   \includegraphics<1>[scale=.60]{cid-01.png}%
   \includegraphics<2>[scale=.60]{cid-02.png}%
   \includegraphics<3>[scale=.60]{cid-03.png}%
   \includegraphics<4>[scale=.33]{cid-04.png}%
 \end{frame}%
+
 % -------------------------------------------------------------------------- }}}
+
 \end{document}
+
 % -------------------------------------------------------------------------- }}}
