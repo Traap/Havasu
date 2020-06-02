@@ -5,8 +5,8 @@ LaTeX Beamer Havasu
 This repository represents my efforts to [Design a custom Beamer theme from
 scratch](https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch#146682).
 I was inspired by a [tex.stackexchange](https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch#146682)
-post I read, and the examples provided.  [beamerports](ttps://bitbucket.org/marczellm/beamerports/src/master/)
-also implemented two examples based on the post.
+post, and the examples provided.  [beamerports](https://bitbucket.org/marczellm/beamerports/src/master/)
+also implemented two [beamer](https://www.ctan.org/pkg/beamer) based on the post.
 
 ## My Goal
 Design the 'Havasu' Beamer theme to mimic my employer's standard presentation
