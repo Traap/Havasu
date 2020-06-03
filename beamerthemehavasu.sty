@@ -1,11 +1,107 @@
-\mode<presentation>%
-%
+% {{{ Required packages
+
 \RequirePackage{tikz}%
-\usecolortheme{havasu}%
-\useoutertheme{havasu}%
-\useinnertheme{havasu}%
-%
+\RequirePackage{xcolor}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Begin Mode presentation
+
+\mode<presentation>%
+
 \setbeamertemplate{navigation symbols}{}%
 \setbeamertemplate{blocks}[rounded][shadow=true]%
-%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Colors
+
+\definecolor{fkblue}{RGB}{0,99,190}
+
+\setbeamercolor*{title page header}{fg=fkblue, bg=}%
+\setbeamercolor*{author}{fg=white, bg=}%
+\setbeamercolor*{date}{fg=white, bg=}%
+\setbeamercolor*{item}{fg=fkblue, bg=}%
+
+\setbeamercolor{normal text}{fg=fkblue, bg=}
+\setbeamercolor{headline}{fg=red, bg=}
+\setbeamercolor{footline}{fg=white, bg=fkblue}
+
+\setbeamerfont{headline}{size=\Tiny}
+\setbeamerfont{footline}{size=\TINY}
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Havasu frametitle
+
+\defbeamertemplate*{frametitle}{havasu}[1][]{%
+  \vspace{3mm}%
+  \hfill\includegraphics[scale=.45]{fk-logo}\hfill%
+  \includegraphics[scale=.44]{fk-horizontal-bar}%
+  \vspace{1mm}%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Havasu sidebar left
+
+\defbeamertemplate*{sidebar left}{havasu}[1][]{%
+  \vspace{5mm}%
+  \hspace{3mm}%
+  \includegraphics[scale=.49]{fk-vertical-bar}%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ headline
+
+\setbeamertemplate{headline}{%
+  \vspace{1mm}%
+  \hspace{5.5cm}%
+  Strictily Confidential%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ footline
+
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}{section in head/foot}%
+    \hspace{7mm}%
+    \copyright\ Copyright Fresenius Kabi AG%
+    \hfill%
+    \insertpagenumber%
+    \hspace{1mm}%
+    \vspace{1mm}%
+  \end{beamercolorbox}%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Title page
+
+\defbeamertemplate*{title page}{havasu}[1][]{%
+  \vspace{3mm}%
+  \hfill\includegraphics[scale=.45]{fk-logo}\hfill%
+  \includegraphics[scale=.44]{fk-horizontal-bar}%
+  \vspace{1mm}%
+
+  \begin{center}%
+    \vspace{7mm}%
+    \usebeamerfont{title}\inserttitle\par%
+    \vspace{2mm}%
+    \usebeamerfont{author}\insertauthor\par%
+    \vspace{2mm}%
+    \usebeamerfont{date}\insertdate\par%
+  \end{center}%
+
+  \vspace{16mm}%
+  \hspace{-4mm}%
+  \includegraphics[scale=.46]{fk-solutions}%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Items
+
+\setbeamertemplate{items}[circle]%
+\setbeamertemplate{sections/subsections in toc}[circle]%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Mode all
+
 \mode<all>%
+
+% -------------------------------------------------------------------------- }}}
