@@ -1,5 +1,7 @@
 % {{{ Required packages
 
+\RequirePackage[framemethod=TikZ]{mdframed}%
+\RequirePackage{geometry, textpos}%
 \RequirePackage{tikz}%
 \RequirePackage{xcolor}%
 
@@ -14,47 +16,52 @@
 % -------------------------------------------------------------------------- }}}
 % {{{ Colors
 
-\definecolor{fkblue}{RGB}{0,99,190}
+\definecolor{HavasuBlue}      {RGB}{0,99,190}%
+\definecolor{HavasuLightBlue} {RGB}{24,55,123}%
+\definecolor{HavasuDarkBlue}  {RGB}{16,36,85}%
+\definecolor{HavasuTitleBlue} {RGB}{7,27,80}%
+\definecolor{HavasuTextGray}  {RGB}{66,66,66}%
+\definecolor{HavasuTitleLine} {RGB}{23,33,113}%
+\definecolor{HavasuBackground}{RGB}{234,234,234}%
 
-\setbeamercolor*{title page header}{fg=fkblue, bg=}%
-\setbeamercolor*{author}{fg=white, bg=}%
-\setbeamercolor*{date}{fg=white, bg=}%
-\setbeamercolor*{item}{fg=fkblue, bg=}%
+\setbeamercolor*{author}               {fg=white,           bg=}%
+\setbeamercolor*{date}                 {fg=white,           bg=}%
+\setbeamercolor*{item}                 {fg=HavasuBlue,      bg=}%
+\setbeamercolor*{header}               {fg=HavasuBlue,      bg=}%
+\setbeamercolor{block title example}   {fg=HavasuLightBlue, bg=}%
+\setbeamercolor{block title}           {fg=HavasuLightBlue, bg=}%
+\setbeamercolor{footline}              {fg=white,           bg=HavasuBlue}%
+\setbeamercolor{frametitle}            {fg=white,           bg=}%
+\setbeamercolor{headline}              {fg=red,             bg=}%
+\setbeamercolor{institute in head/foot}{parent={footline}}%
+\setbeamercolor{item}                  {parent={normal text}}%
+\setbeamercolor{logo}                  {parent={footline}}%
+\setbeamercolor{normal text}           {fg=HavasuTextGray,  bg=}%
+\setbeamercolor{section in toc}        {fg=HavasuLightBlue, bg=}%
+\setbeamercolor{subsection in toc}     {fg=HavasuLightBlue, bg=}%
+\setbeamercolor{title page}            {fg=HavasuBlue,      bg=}%
 
-\setbeamercolor{normal text}{fg=fkblue, bg=}
-\setbeamercolor{headline}{fg=red, bg=}
-\setbeamercolor{footline}{fg=white, bg=fkblue}
-
-\setbeamerfont{headline}{size=\Tiny}
-\setbeamerfont{footline}{size=\TINY}
+\setbeamerfont{headline}{size=\Tiny}%
+\setbeamerfont{footline}{size=\Tiny}%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Havasu frametitle
-
-\defbeamertemplate*{frametitle}{havasu}[1][]{%
-  \vspace{3mm}%
-  \hfill\includegraphics[scale=.45]{fk-logo}\hfill%
+% {{{ logo command is used multiple times to layout a multipart logo.
+\newcommand{\havasuLogoCommand}{%
+  \vspace{1mm}%
+  \hfill%
+  \includegraphics[scale=.30]{fk-logo}%
+  \hfill%
   \includegraphics[scale=.44]{fk-horizontal-bar}%
   \vspace{1mm}%
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Havasu sidebar left
+% {{{ background
 
-\defbeamertemplate*{sidebar left}{havasu}[1][]{%
-  \vspace{5mm}%
-  \hspace{3mm}%
-  \includegraphics[scale=.49]{fk-vertical-bar}%
-}%
-
-% -------------------------------------------------------------------------- }}}
-% {{{ headline
-
-\setbeamertemplate{headline}{%
-  \vspace{1mm}%
-  \hspace{5.5cm}%
-  Strictily Confidential%
-}%
+% \setbeamertemplate{background}{%
+%   \includegraphics[scale=.40]{fk-logo}%
+%   \includegraphics[scale=.44]{fk-horizontal-bar}%
+% }%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ footline
@@ -71,14 +78,68 @@
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Title page
+% {{{ frametitle
+
+\defbeamertemplate*{frametitle}{havasu}[1][]{%
+  \havasuLogoCommand%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ headline
+
+\setbeamertemplate{headline}{%
+  \vspace{1mm}%
+  \hspace{58mm}%
+  Strictily Confidential%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ items
+
+\setbeamertemplate{items}[circle]%
+\setbeamertemplate{sections/subsections in toc}[circle]%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ sidebar left
+
+\defbeamertemplate*{sidebar left}{havasu}[1][]{%
+  \vspace{5mm}%
+  \hspace{3mm}%
+  \includegraphics[scale=.49]{fk-vertical-bar}%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ surroundwithmdframed
+
+\mdfdefinestyle{HavasuLightBlueStyle}{%
+  backgroundcolor=HavasuLightBlue!10,%
+  innertopmargin=\topskip,%
+  innertopmargin=\topskip,%
+  leftmargin=2,%
+  linecolor=HavasuBlue!50,%
+  linewidth=0.5pt,
+  rightmargin=2,%
+  roundcorner=3pt,%
+}%
+
+
+\mdfdefinestyle{HavasuLightGreenStyle}{%
+  backgroundcolor=green!10,%
+  innertopmargin=\topskip,%
+  innertopmargin=\topskip,%
+  leftmargin=2,%
+  linecolor=green!50,%
+  linewidth=0.5pt,
+  rightmargin=2,%
+  roundcorner=3pt,%
+}%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ title page
 
 \defbeamertemplate*{title page}{havasu}[1][]{%
-  \vspace{3mm}%
-  \hfill\includegraphics[scale=.45]{fk-logo}\hfill%
-  \includegraphics[scale=.44]{fk-horizontal-bar}%
-  \vspace{1mm}%
-
+  \havasuLogoCommand%
+%
   \begin{center}%
     \vspace{7mm}%
     \usebeamerfont{title}\inserttitle\par%
@@ -87,20 +148,14 @@
     \vspace{2mm}%
     \usebeamerfont{date}\insertdate\par%
   \end{center}%
-
+%
   \vspace{16mm}%
   \hspace{-4mm}%
   \includegraphics[scale=.46]{fk-solutions}%
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Items
-
-\setbeamertemplate{items}[circle]%
-\setbeamertemplate{sections/subsections in toc}[circle]%
-
-% -------------------------------------------------------------------------- }}}
-% {{{ Mode all
+% {{{ End Mode presentation
 
 \mode<all>%
 

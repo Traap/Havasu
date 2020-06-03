@@ -5,17 +5,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\title{I\&D Atlassian Jira Rules}
+\title{I\&D Atlassian JIRA Rules}
 \date{\today}
 \author{Gary A. Howard}
 
 \usetheme{havasu}
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Presentation
+% {{{ Begin Presentation
 
 \begin{document}
 
+% -------------------------------------------------------------------------- }}}
 % {{{ Title page
 
 \begin{frame}
@@ -23,51 +24,72 @@
 \end{frame}
 
 % -------------------------------------------------------------------------- }}}
-% {{{ SubTitle page
+% {{{ JIRA Assignee
 
-\begin{frame}%
-  \frametitle{I\&D IT JIRA Project Rules}%
-  \framesubtitle{Rules apply to All JIRA issue types.}%
-  %
-  \begin{theorem}%
+\begin{frame}{JIRA issue Assignee}%
+  \begin{mdframed}[style=HavasuLightBlueStyle]%
+    \textbf{Rule \#1}\\%
     The law of non-contradiction states that contradictory propositions cannot
-    be both true in the same sense at the same time.%
-  \end{theorem}%
+    be both true in the same sense at the same time.  Therefore, we can conclude
+    if an issue is ``In progress'' is \textbf{must} have an ``Assignee''.
+  \end{mdframed}%
   %
-  When issue is taken or assigned, it is given that:
-  \begin{enumerate}%
-    \item Epics must have an Assignee.%
-    \item Stories must have an Assignee.%
-    \item Tasks must have an Assignee.%
-    \item Sub-task must have an Assignee.%
-  \end{enumerate}%
+  \begin{mdframed}[style=HavasuLightGreenStyle]%
+    \textbf{Assignee is applied to:}%
+    \begin{enumerate}%
+      \item Epics%
+      \item Stories%
+      \item Tasks%
+      \item Sub-task%
+      \item Bugs%
+    \end{enumerate}%
+  \end{mdframed}%
 \end{frame}%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Longer title
+% {{{ Story point values using a Fibonacci sequence.
 
-\begin{frame}{All estimated using the following Fibonacci values.}%
-  \begin{itemize}%
-    \item  $1.0 \Rightarrow  0.0 \leq\  2.5 hrs$%
-    \item  $2.0 \Rightarrow  2.5 \leq\  5.0 hrs$%
-    \item  $3.0 \Rightarrow  5.0 \leq\  8.0 hrs$%
-    \item  $5.0 \Rightarrow  8.0 \leq\ 16.0 hrs$%
-    \item  $8.0 \Rightarrow 16.0 \leq\ 24.0 hrs$%
-    \item $13.0 \Rightarrow 24.0 \leq\ 32.0 hrs$%
-  \end{itemize}%
+\begin{frame}{JIRA Story Point Values}%
+  \begin{mdframed}[style=HavasuLightBlueStyle]%
+    \textbf{Rule \#2}\\%
+    \textbf{All} JIRA issue shall use the following Fibonacci sequence when
+    estimating, and be decomposed to one of these values.
+  \end{mdframed}%
+  %
+  \begin{mdframed}[style=HavasuLightGreenStyle]%
+    \textbf{Story point values:}%
+    \begin{enumerate}%
+      \item  $1.0 \Rightarrow  0.0 \leq\  2.5 hrs$%
+      \item  $2.0 \Rightarrow  2.5 \leq\  5.0 hrs$%
+      \item  $3.0 \Rightarrow  5.0 \leq\  8.0 hrs$%
+      \item  $5.0 \Rightarrow  8.0 \leq\ 16.0 hrs$%
+      \item  $8.0 \Rightarrow 16.0 \leq\ 24.0 hrs$%
+      \item $13.0 \Rightarrow 24.0 \leq\ 32.0 hrs$%
+    \end{enumerate}%
+  \end{mdframed}%
 \end{frame}%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ Picture show
+% {{{ Team responsibilities
 
-\begin{frame}{CID Overview}{Featuring DevOps}%
-  \includegraphics<1>[scale=.60]{cid-01.png}%
-  \includegraphics<2>[scale=.60]{cid-02.png}%
-  \includegraphics<3>[scale=.60]{cid-03.png}%
-  \includegraphics<4>[scale=.33]{cid-04.png}%
+\begin{frame}{Daily Responsibilities}%
+  \begin{mdframed}[style=HavasuLightBlueStyle]%
+    \textbf{Rule \#3}\\%
+    \textbf{All} JIRA issues shall be managed daily.
+  \end{mdframed}%
+  %
+  \begin{mdframed}[style=HavasuLightGreenStyle]%
+    \textbf{Daily expectations:}%
+    \begin{enumerate}%
+      \item Assign the JIRA issue to yourself the moment you begin work.
+      \item Team members shall hold each other accountable for team data.
+      \item Scrum masters shall monitor this and report repeat offenders.
+    \end{enumerate}%
+  \end{mdframed}%
 \end{frame}%
 
 % -------------------------------------------------------------------------- }}}
+% {{{ End Presentation
 
 \end{document}
 
