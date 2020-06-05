@@ -31,7 +31,7 @@
 \setbeamercolor{block title example}   {fg=HavasuLightBlue, bg=}%
 \setbeamercolor{block title}           {fg=HavasuLightBlue, bg=}%
 \setbeamercolor{footline}              {fg=white,           bg=HavasuBlue}%
-\setbeamercolor{frametitle}            {fg=white,           bg=}%
+\setbeamercolor{frametitle}            {fg=HavasuBlue,      bg=}%
 \setbeamercolor{headline}              {fg=red,             bg=}%
 \setbeamercolor{institute in head/foot}{parent={footline}}%
 \setbeamercolor{item}                  {parent={normal text}}%
@@ -45,6 +45,19 @@
 \setbeamerfont{footline}{size=\Tiny}%
 
 % -------------------------------------------------------------------------- }}}
+% {{{ defbeamertemplate signatue
+
+% \defbeamertemplate
+%   <mode specification>*
+%   {element name}
+%   {predefined option}
+%   [argument number]
+%   [default optional argument]
+%   {predefined text}
+%   [action]
+%   {action command}
+
+% -------------------------------------------------------------------------- }}}
 % {{{ logo command is used multiple times to layout a multipart logo.
 \newcommand{\havasuLogoCommand}{%
   \vspace{1mm}%
@@ -56,12 +69,14 @@
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ background
+% {{{ background canvas
 
-% \setbeamertemplate{background}{%
-%   \includegraphics[scale=.40]{fk-logo}%
-%   \includegraphics[scale=.44]{fk-horizontal-bar}%
-% }%
+\setbeamertemplate{background canvas}{%
+  \begin{tikzpicture}
+    \node at (0.0, 5.0) {\includegraphics[scale=.30]{fk-logo}};
+%    \node at (4.5, 1.5) {\includegraphics[scale=.44]{fk-horizontal-bar}};
+  \end{tikzpicture}
+}
 
 % -------------------------------------------------------------------------- }}}
 % {{{ footline
@@ -81,7 +96,8 @@
 % {{{ frametitle
 
 \defbeamertemplate*{frametitle}{havasu}[1][]{%
-  \havasuLogoCommand%
+  foo bar
+%  \havasuLogoCommand%
 }%
 
 % -------------------------------------------------------------------------- }}}
@@ -138,7 +154,7 @@
 % {{{ title page
 
 \defbeamertemplate*{title page}{havasu}[1][]{%
-  \havasuLogoCommand%
+%  \havasuLogoCommand%
 %
   \begin{center}%
     \vspace{7mm}%
