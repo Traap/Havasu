@@ -59,31 +59,33 @@
 
 % -------------------------------------------------------------------------- }}}
 % {{{ logo command is used multiple times to layout a multipart logo.
+
 \newcommand{\havasuLogoCommand}{%
-  \vspace{1mm}%
-  \hfill%
-  \includegraphics[scale=.30]{fk-logo}%
-  \hfill%
-  \includegraphics[scale=.44]{fk-horizontal-bar}%
-  \vspace{1mm}%
+    \hspace{3mm}%
+    \includegraphics[scale=.30]{images/fk-page-logo}%
 }%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ background canvas
 
 \setbeamertemplate{background canvas}{%
-  \begin{tikzpicture}
-    \node at (0.0, 5.0) {\includegraphics[scale=.30]{fk-logo}};
-%    \node at (4.5, 1.5) {\includegraphics[scale=.44]{fk-horizontal-bar}};
-  \end{tikzpicture}
-}
+  \ifnum\thepage>1\relax%
+    \includegraphics[width=\paperwidth,
+                    height=\paperheight,
+                    keepaspectratio]{images/fk-page-two}%
+  \else%
+    \includegraphics[width=\paperwidth,
+                    height=\paperheight,
+                    keepaspectratio]{images/fk-page-one}%
+  \fi%
+}%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ footline
 
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}{section in head/foot}%
-    \hspace{7mm}%
+    \hspace{10mm}%
     \copyright\ Copyright Fresenius Kabi AG%
     \hfill%
     \insertpagenumber%
@@ -97,7 +99,6 @@
 
 \defbeamertemplate*{frametitle}{havasu}[1][]{%
   foo bar
-%  \havasuLogoCommand%
 }%
 
 % -------------------------------------------------------------------------- }}}
@@ -118,11 +119,11 @@
 % -------------------------------------------------------------------------- }}}
 % {{{ sidebar left
 
-\defbeamertemplate*{sidebar left}{havasu}[1][]{%
-  \vspace{5mm}%
-  \hspace{3mm}%
-  \includegraphics[scale=.49]{fk-vertical-bar}%
-}%
+% \defbeamertemplate*{sidebar left}{havasu}[1][]{%
+%   \vspace{5mm}%
+%   \hspace{3mm}%
+%   \includegraphics[scale=.49]{fk-vertical-bar}%
+% }%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ surroundwithmdframed
@@ -164,10 +165,6 @@
     \vspace{2mm}%
     \usebeamerfont{date}\insertdate\par%
   \end{center}%
-%
-  \vspace{16mm}%
-  \hspace{-4mm}%
-  \includegraphics[scale=.46]{fk-solutions}%
 }%
 
 % -------------------------------------------------------------------------- }}}
