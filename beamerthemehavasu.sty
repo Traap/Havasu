@@ -58,14 +58,6 @@
 %   {action command}
 
 % -------------------------------------------------------------------------- }}}
-% {{{ logo command is used multiple times to layout a multipart logo.
-
-\newcommand{\havasuLogoCommand}{%
-    \hspace{3mm}%
-    \includegraphics[scale=.30]{images/fk-page-logo}%
-}%
-
-% -------------------------------------------------------------------------- }}}
 % {{{ background canvas
 
 \setbeamertemplate{background canvas}{%
@@ -95,13 +87,6 @@
 }%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ frametitle
-
-\defbeamertemplate*{frametitle}{havasu}[1][]{%
-  foo bar
-}%
-
-% -------------------------------------------------------------------------- }}}
 % {{{ headline
 
 \setbeamertemplate{headline}{%
@@ -117,15 +102,6 @@
 \setbeamertemplate{sections/subsections in toc}[circle]%
 
 % -------------------------------------------------------------------------- }}}
-% {{{ sidebar left
-
-% \defbeamertemplate*{sidebar left}{havasu}[1][]{%
-%   \vspace{5mm}%
-%   \hspace{3mm}%
-%   \includegraphics[scale=.49]{fk-vertical-bar}%
-% }%
-
-% -------------------------------------------------------------------------- }}}
 % {{{ surroundwithmdframed
 
 \mdfdefinestyle{HavasuLightBlueStyle}{%
@@ -138,7 +114,6 @@
   rightmargin=2,%
   roundcorner=3pt,%
 }%
-
 
 \mdfdefinestyle{HavasuLightGreenStyle}{%
   backgroundcolor=green!10,%
@@ -155,8 +130,6 @@
 % {{{ title page
 
 \defbeamertemplate*{title page}{havasu}[1][]{%
-%  \havasuLogoCommand%
-%
   \begin{center}%
     \vspace{7mm}%
     \usebeamerfont{title}\inserttitle\par%
