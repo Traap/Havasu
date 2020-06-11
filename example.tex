@@ -1,8 +1,6 @@
-% {{{ Document preamble
+% {{{ Document preamble - Example 
 
 \documentclass{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 
 \title{There Is No Largest Prime Number}
 \date[ISPN ’80]{27th International Symposium of Prime Numbers}
@@ -26,8 +24,8 @@
 % {{{ SubTitle page
 
 \begin{frame}%
-  \frametitle{There is No Largest Prime Number}%
-  \framesubtitle{The proof uses \textit{reductio ad absurdum}.}%
+  \frametitle{\hspace{4mm}There is No Largest Prime Number}%
+  \framesubtitle{\hspace{4mm}The proof uses \textit{reductio ad absurdum}.}%
   %
   \begin{theorem}%
     There is no largest prime number.%
@@ -45,7 +43,7 @@
 % -------------------------------------------------------------------------- }}}
 % {{{ Longer title
 
-\begin{frame}{Only the frame title argument was use}%
+\begin{frame}{\hspace{4mm}Only the frame title argument was use}%
   \begin{itemize}%
     \item one%
     \item two%
@@ -55,11 +53,28 @@
 % -------------------------------------------------------------------------- }}}
 % {{{ Picture show
 
-\begin{frame}{CID Overview}{Admiral McRaven motivational speech}%
-  \includegraphics<1>[scale=.22]{cid-01.png}%
-  \includegraphics<2>[scale=.60]{cid-02.png}%
-  \includegraphics<3>[scale=.15]{cid-03.png}%
-  \includegraphics<4>[scale=.34]{cid-04.png}%
+\begin{frame}
+  \frametitle{\hspace{4mm}Admiral McRaven}%
+  \framesubtitle{\hspace{4mm}Motivational Speech}%
+  \includegraphics[scale=.22]{images/cid-01.png}%
+\end{frame}%
+
+\begin{frame}
+  \frametitle{\hspace{4mm}A not so random person}%
+  \framesubtitle{\hspace{4mm}Okay! It's me.}%
+  \includegraphics[scale=.60]{images/cid-02.png}%
+\end{frame}%
+
+\begin{frame}
+  \frametitle{\hspace{4mm}Kool wallpaper}%
+  \framesubtitle{\hspace{4mm}Nice colors and lighting}%
+  \includegraphics[scale=.16]{images/cid-03.png}%
+\end{frame}%
+
+\begin{frame}
+  \frametitle{\hspace{4mm}Fresenius-kabi}%
+  \framesubtitle{\hspace{4mm}Caring For Life...}%
+  \includegraphics[scale=.38]{images/cid-04.png}%
 \end{frame}%
 
 % -------------------------------------------------------------------------- }}}
