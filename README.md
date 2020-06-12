@@ -15,3 +15,9 @@ format.  I am using my employer's format because each page has:
 2. Horizontal line graphic,
 3. Vertical line graphic, and
 4. a different graphic is used on the title page.
+
+## MikTex installation steps.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Traap/havasu/master/install.sh)"
+```
