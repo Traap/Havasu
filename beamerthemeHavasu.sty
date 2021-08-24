@@ -8,6 +8,14 @@
 \RequirePackage[T1]{fontenc}
 
 % -------------------------------------------------------------------------- }}}
+% {{{ Commands the user can renewcommand from data/additional-layout.sty.
+
+\newcommand{\havasuCompanyName}{Allan Consulting}%
+\newcommand{\havasuConfidential}{Strictily Confidential}%
+\newcommand{\havasuPageOne}{images/page-one.png}%
+\newcommand{\havasuPageTwo}{images/page-two.png}%
+
+% -------------------------------------------------------------------------- }}}
 % {{{ Begin Mode presentation
 
 \mode<presentation>%
@@ -66,11 +74,11 @@
   \ifnum\thepage>1\relax%
     \includegraphics[width=\paperwidth,
                     height=\paperheight,
-                    keepaspectratio]{images/fk-page-two}%
+                    keepaspectratio]{\havasuPageTwo}%
   \else%
     \includegraphics[width=\paperwidth,
                     height=\paperheight,
-                    keepaspectratio]{images/fk-page-one}%
+                    keepaspectratio]{\havasuPageOne}%
   \fi%
 }%
 
@@ -80,7 +88,7 @@
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}{section in head/foot}%
     \hspace{10mm}%
-    \copyright\ Copyright Fresenius Kabi AG%
+    \copyright\havasuCompanyName%
     \hfill%
     \insertpagenumber%
     \hspace{1mm}%
@@ -94,7 +102,7 @@
 \setbeamertemplate{headline}{%
   \vspace{1mm}%
   \hspace{58mm}%
-  Strictily Confidential%
+  \havasuConfidential%
 }%
 
 % -------------------------------------------------------------------------- }}}
@@ -141,6 +149,15 @@
     \usebeamerfont{date}\insertdate\par%
   \end{center}%
 }%
+
+% -------------------------------------------------------------------------- }}}
+% {{{ Customization hook.
+
+\IfFileExists{data/additional-layout.sty}%
+  {\input{data/additional-layout.sty}}%
+  {%
+   % Else: No operation.
+  }%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ End Mode presentation
