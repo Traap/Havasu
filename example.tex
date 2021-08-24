@@ -1,4 +1,4 @@
-% {{{ Document preamble - Example 
+% {{{ Document preamble - Example
 
 \documentclass{beamer}
 
@@ -44,10 +44,23 @@
 % {{{ Longer title
 
 \begin{frame}{\hspace{4mm}Only the frame title argument was use}%
-  \begin{itemize}%
-    \item one%
-    \item two%
-  \end{itemize}%
+  \begin{mdframed}[style=HavasuLightGreenStyle]
+    \large{HavasuLightGreenStyle}
+    \begin{itemize}%
+      \item ene%
+      \item two%
+      \item three%
+    \end{itemize}%
+  \end{mdframed}%
+
+  \begin{mdframed}[style=HavasuLightBlueStyle]
+    \large{HavasuLightBlueStyle}
+    \begin{itemize}%
+      \item ene%
+      \item two%
+      \item three%
+    \end{itemize}%
+  \end{mdframed}%
 \end{frame}%
 
 % -------------------------------------------------------------------------- }}}
