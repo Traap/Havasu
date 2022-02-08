@@ -1,17 +1,19 @@
 % {{{ Required packages
 
+\RequirePackage{array,forest}%
 \RequirePackage[framemethod=TikZ]{mdframed}%
 \RequirePackage{geometry, textpos}%
-\RequirePackage{tikz}%
-\RequirePackage{xcolor}%
-\RequirePackage[utf8]{inputenc}
+\RequirePackage{smartdiagram}%
 \RequirePackage[T1]{fontenc}
+\RequirePackage{tikz}%
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{xcolor}%
 
 % -------------------------------------------------------------------------- }}}
 % {{{ Commands the user can renewcommand from data/additional-layout.sty.
 
-\newcommand{\havasuCompanyName}{Allan Consulting}%
-\newcommand{\havasuConfidential}{Strictily Confidential}%
+\newcommand{\havasuCompanyName}{Gary A. Howard}%
+\newcommand{\havasuConfidential}{Strictly Confidential}%
 \newcommand{\havasuPageOne}{images/page-one.png}%
 \newcommand{\havasuPageTwo}{images/page-two.png}%
 
@@ -73,12 +75,12 @@
 \setbeamertemplate{background canvas}{%
   \ifnum\thepage>1\relax%
     \includegraphics[width=\paperwidth,
-                    height=\paperheight,
-                    keepaspectratio]{\havasuPageTwo}%
+                     height=\paperheight
+                    ]{\havasuPageTwo}%
   \else%
     \includegraphics[width=\paperwidth,
-                    height=\paperheight,
-                    keepaspectratio]{\havasuPageOne}%
+                     height=\paperheight
+                    ]{\havasuPageOne}%
   \fi%
 }%
 
@@ -87,7 +89,6 @@
 
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}{section in head/foot}%
-    \hspace{10mm}%
     \copyright\havasuCompanyName%
     \hfill%
     \insertpagenumber%
@@ -101,8 +102,7 @@
 
 \setbeamertemplate{headline}{%
   \vspace{1mm}%
-  \hspace{58mm}%
-  \havasuConfidential%
+  \makebox[\paperwidth][c]{\havasuConfidential}%
 }%
 
 % -------------------------------------------------------------------------- }}}
@@ -140,14 +140,9 @@
 % {{{ title page
 
 \defbeamertemplate*{title page}{havasu}[1][]{%
-  \begin{center}%
-    \vspace{7mm}%
-    \usebeamerfont{title}\inserttitle\par%
-    \vspace{2mm}%
-    \usebeamerfont{author}\insertauthor\par%
-    \vspace{2mm}%
-    \usebeamerfont{date}\insertdate\par%
-  \end{center}%
+  \usebeamerfont{title}\inserttitle\par%
+  \usebeamerfont{author}\insertauthor\par%
+  \usebeamerfont{date}\insertdate\par%
 }%
 
 % -------------------------------------------------------------------------- }}}

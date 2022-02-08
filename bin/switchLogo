@@ -1,0 +1,52 @@
+#!/bin/bash
+# {{{ A function to page-one and page-two logos.
+#
+# Name: switchLogo
+#
+# Use:
+#  switchLogo
+#
+# Argument:
+#  $1 - [icu|kabi]
+#       Different Logos I experiment with.
+#
+# -------------------------------------------------------------------------- }}}
+# {{{ Validate argument.
+
+if [[ $# -eq 0  || $# -eq 1 ]]; then
+
+# -------------------------------------------------------------------------- }}}
+# {{{ Copy xyz-page-abc.png to page-abc.png
+
+case $1 in
+  fca)
+    company=${1}
+    ;;
+  icu)
+    company=${1}
+    ;;
+  kabi)
+    company=${1}
+    ;;
+  *)
+    company=${1}
+    ;;
+esac
+
+cp -v images/${company}-page-one.png images/page-one.png
+cp -v images/${company}-page-two.png images/page-two.png
+
+# -------------------------------------------------------------------------- }}}
+# {{{ Report user input error.
+
+else
+  echo "Logo name [fda|icu|kabi] is required" \
+      && exit
+fi
+
+# -------------------------------------------------------------------------- }}}
+# {{{ Exit gracefully
+
+exit 0
+
+# -------------------------------------------------------------------------- }}}
