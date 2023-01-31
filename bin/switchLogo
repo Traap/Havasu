@@ -7,7 +7,7 @@
 #  switchLogo
 #
 # Argument:
-#  $1 - [icu|kabi]
+#  $1 - [fda|icu|kabi]
 #       Different Logos I experiment with.
 #
 # -------------------------------------------------------------------------- }}}
@@ -19,13 +19,16 @@ if [[ $# -eq 0  || $# -eq 1 ]]; then
 # {{{ Copy xyz-page-abc.png to page-abc.png
 
 case $1 in
-  fca)
+  fda)
     company=${1}
     ;;
   icu)
     company=${1}
     ;;
   kabi)
+    company=${1}
+    ;;
+  neovim)
     company=${1}
     ;;
   *)

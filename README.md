@@ -17,7 +17,7 @@ also implemented two [beamer](https://www.ctan.org/pkg/beamer) based on the post
 3. Use [vimtex](https://github.com/lervag/vimtex] to continuously compile
    example.tex.
 
-4. Use .bin/switchLogo [fda|icu|kabi] to see presentation update page-one.png
+4. Use .bin/switchLogo [fda|icu|kabi|neovim] to see presentation update page-one.png
    and page-two.png.
 
 ###
